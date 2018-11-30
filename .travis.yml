@@ -9,7 +9,7 @@ php:
   - hhvm
 
 before_script: composer update -v
-script: phpunit --configuration phpunit.xml --coverage-text
+script: vendor/bin/phpunit --verbose --colors --configuration phpunit.xml --coverage-text
 
 notifications:
-  email: "timur.shagiakhmetov@corp.badoo.com"
+  email: "shagtv@gmail.com"
