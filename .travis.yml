@@ -11,5 +11,9 @@ php:
 before_script: composer install
 script: vendor/bin/phpunit --verbose --colors --configuration phpunit.xml --coverage-text
 
+after_success:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+
 notifications:
   email: "shagtv@gmail.com"
