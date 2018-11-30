@@ -17,7 +17,7 @@ class ClientTest extends \PHPUnit\Framework\TestCase
         /** @var \Doctrine\DBAL\Connection $ConnectionMock */
         $ConnectionMock = $this->getMockBuilder('\Doctrine\DBAL\Connection')
             ->disableOriginalConstructor()
-            ->setMethods()
+            ->setMethods([])
             ->getMock();
 
         $test_connection_string = 'test_connection_string';
