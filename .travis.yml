@@ -9,7 +9,7 @@ php:
   - hhvm
 
 before_script: composer install
-script: vendor/bin/phpunit --verbose --colors --configuration phpunit.xml --coverage-clover=coverage.clover
+script: vendor/bin/phpunit --verbose --colors --coverage-clover=coverage.clover
 
 after_success:
   - wget https://scrutinizer-ci.com/ocular.phar
