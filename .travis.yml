@@ -9,11 +9,10 @@ php:
   - hhvm
 
 before_script: composer install
-script: vendor/bin/phpunit --verbose --colors --coverage-clover=coverage.clover
+script: vendor/bin/phpunit --verbose --colors --coverage-clover=coverage.xml
 
 after_success:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email: "shagtv@gmail.com"
